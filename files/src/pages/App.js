@@ -11,7 +11,7 @@ export default class App extends React.Component {
       <div>
         <nav className="nav is-tab has-shadow">
         <div className="nav-left">
-          <IndexLink to="/" className="nav-item is-tab" activeClassName="is-active">Home</IndexLink>
+          <IndexLink to="/" className="nav-item is-tab" activeClassName="is-active">PropElements</IndexLink>
           <Link to="/elementos" className="nav-item is-tab" activeClassName="is-active">Elementos</Link>
           <Link to="/sobre" className="nav-item is-tab" activeClassName="is-active">Sobre</Link>
         </div>

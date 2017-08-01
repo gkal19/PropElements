@@ -1,7 +1,70 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import './main.css'
+const nativeCSS = require('native-css')
+
+const styles = StyleSheet.create({
+  "*": {
+    "margin": "0",
+    "padding": "0"
+  },
+  "body": {
+    "font-family": "Arial, Helvetica, sans-serif"
+  },
+  "li": {
+    "display": "inline-block",
+    "width": "50px",
+    "float": "left",
+    "height": "60px",
+    "margin": "1px",
+    "text-align": "center"
+  },
+  "wrapper": {
+    "width": "1015px",
+    "margin": "0 auto"
+  },
+  "bottom_rows": {
+    "margin-top": "25px"
+  },
+  "element": {
+    "font-weight": "bold"
+  },
+  "weight": {
+    "font-size": ".7em"
+  },
+  "s_block": {
+    "background-color": "blue"
+  },
+  "d_block": {
+    "background-color": "red"
+  },
+  "p_block": {
+    "background-color": "orange"
+  },
+  "f_block": {
+    "background-color": "green"
+  },
+  "space": {
+    "margin-left": "21px"
+  },
+  "left": {
+    "float": "left",
+    "width": "175px",
+    "margin-top": "25px"
+  },
+  "red": {
+    "color": "red"
+  },
+  "Lu": {
+    "width": "18px"
+  },
+  "Lr": {
+    "width": "18px"
+  },
+  "clear": {
+    "clear": "both"
+  }
+});
 
 export default class Elementos extends React.Component {
   constructor() {
@@ -13,177 +76,693 @@ export default class Elementos extends React.Component {
       <div>
       <h1 className="title">Lista de Elementos</h1>
 
-      <div className="holder">
-        <div className="number_column">
-          <p className="number">Grupo<br />Período</p>
-          <p className="number"><br />1</p>
-          <p className="number"><br />2</p>
-          <p className="number"><br />3</p>
-          <p className="number"><br />4</p>
-          <p className="number"><br />5</p>
-          <p className="number"><br />6</p>
-          <p className="number"><br />7</p>
+      <div id="wrapper">
+        <div>
+          <ul>{/*First row*/}
+            <li className="red">Grupo Período</li>
+            <li className="red">1</li>
+            <li className="red">2</li>
+            <li className="space red">3</li>
+            <li className="red">4</li>
+            <li className="red">5</li>
+            <li className="red">6</li>
+            <li className="red">7</li>
+            <li className="red">8</li>
+            <li className="red">9</li>
+            <li className="red">10</li>
+            <li className="red">11</li>
+            <li className="red">12</li>
+            <li className="red">13</li>
+            <li className="red">14</li>
+            <li className="red">15</li>
+            <li className="red">16</li>
+            <li className="red">17</li>
+            <li className="red">18</li>
+          </ul>{/*Close First row*/}
+          <ul>{/*Second Row*/}
+            <li className="red">1</li>
+            <li className="s-block">
+              <p>1</p>
+              <p className="element">H</p>
+              <p className="weight">1.008</p>
+            </li>
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li className="p-block space">
+              <p>2</p>
+              <p className="element">He</p>
+              <p className="weight">4.0026</p>
+            </li>
+          </ul>{/*Close Second row*/}
+          <ul>{/*Third Row*/}
+            <li className="red">2</li>
+            <li className="s-block">
+              <p>3</p>
+              <p className="element">Li</p>
+              <p className="weight">6.94</p>
+            </li>
+            <li className="s-block">
+              <p>4</p>
+              <p className="element">Be</p>
+              <p className="weight">9.0122</p>
+            </li>
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li className="p-block space">
+              <p>5</p>
+              <p className="element">B</p>
+              <p className="weight">10.81</p>
+            </li>
+            <li className="p-block">
+              <p>6</p>
+              <p className="element">C</p>
+              <p className="weight">12.011</p>
+            </li>
+            <li className="p-block">
+              <p>7</p>
+              <p className="element">N</p>
+              <p className="weight">14.007</p>
+            </li>
+            <li className="p-block">
+              <p>8</p>
+              <p className="element">O</p>
+              <p className="weight">15.999</p>
+            </li>
+            <li className="p-block">
+              <p>9</p>
+              <p className="element">F</p>
+              <p className="weight">18.998</p>
+            </li>
+            <li className="p-block">
+              <p>10</p>
+              <p className="element">Ne</p>
+              <p className="weight">20.180</p>
+            </li>
+          </ul>{/*Close Third row*/}
+          <ul>{/*Forth Row*/}
+            <li className="red">3</li>
+            <li className="s-block">
+              <p>11</p>
+              <p className="element">Na</p>
+              <p className="weight">22.990</p>
+            </li>
+            <li className="s-block">
+              <p>12</p>
+              <p className="element">Mg</p>
+              <p className="weight">24</p>
+            </li>
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li className="p-block space">
+              <p>13</p>
+              <p className="element">Al</p>
+              <p className="weight">26.982</p>
+            </li>
+            <li className="p-block">
+              <p>14</p>
+              <p className="element">Si</p>
+              <p className="weight">28.085</p>
+            </li>
+            <li className="p-block">
+              <p>15</p>
+              <p className="element">P</p>
+              <p className="weight">30.974</p>
+            </li>
+            <li className="p-block">
+              <p>16</p>
+              <p className="element">S</p>
+              <p className="weight">32.45</p>
+            </li>
+            <li className="p-block">
+              <p>17</p>
+              <p className="element">Cl</p>
+              <p className="weight">35.45</p>
+            </li>
+            <li className="p-block">
+              <p>18</p>
+              <p className="element">Ar</p>
+              <p className="weight">39.948</p>
+            </li>
+          </ul>{/*Close Forth row*/}
+          <ul>{/*Fifth Row*/}
+            <li className="red">4</li>
+            <li className="s-block">
+              <p>19</p>
+              <p className="element">Na</p>
+              <p className="weight">22.990</p>
+            </li>
+            <li className="s-block">
+              <p>20</p>
+              <p className="element">Mg</p>
+              <p className="weight">24</p>
+            </li>
+            <li className="d-block space">
+              <p>21</p>
+              <p className="element">Sc</p>
+              <p className="weight">44.956</p>
+            </li>
+            <li className="d-block">
+              <p>22</p>
+              <p className="element">Ti</p>
+              <p className="weight">47.867</p>
+            </li>
+            <li className="d-block">
+              <p>23</p>
+              <p className="element">V</p>
+              <p className="weight">50.942</p>
+            </li>
+            <li className="d-block">
+              <p>24</p>
+              <p className="element">Cr</p>
+              <p className="weight">51.996</p>
+            </li>
+            <li className="d-block">
+              <p>25</p>
+              <p className="element">Mn</p>
+              <p className="weight">54.938</p>
+            </li>
+            <li className="d-block">
+              <p>26</p>
+              <p className="element">Fe</p>
+              <p className="weight">55.845</p>
+            </li>
+            <li className="d-block">
+              <p>27</p>
+              <p className="element">Co</p>
+              <p className="weight">58.933</p>
+            </li>
+            <li className="d-block">
+              <p>28</p>
+              <p className="element">Ni</p>
+              <p className="weight">58.693</p>
+            </li>
+            <li className="d-block">
+              <p>29</p>
+              <p className="element">Cu</p>
+              <p className="weight">63.38</p>
+            </li>
+            <li className="d-block">
+              <p>30</p>
+              <p className="element">Zn</p>
+              <p className="weight">65.38</p>
+            </li>
+            <li className="p-block">
+              <p>31</p>
+              <p className="element">Ga</p>
+              <p className="weight">69.723</p>
+            </li>
+            <li className="p-block">
+              <p>32</p>
+              <p className="element">Ge</p>
+              <p className="weight">72.63</p>
+            </li>
+            <li className="p-block">
+              <p>33</p>
+              <p className="element">As</p>
+              <p className="weight">74.922</p>
+            </li>
+            <li className="p-block">
+              <p>34</p>
+              <p className="element">Se</p>
+              <p className="weight">78.96</p>
+            </li>
+            <li className="p-block">
+              <p>35</p>
+              <p className="element">Br</p>
+              <p className="weight">79.904</p>
+            </li>
+            <li className="p-block">
+              <p>36</p>
+              <p className="element">Kr</p>
+              <p className="weight">83.798</p>
+            </li>
+          </ul>{/*Close Fifth row*/}
+          <ul>{/*Sixth Row*/}
+            <li className="red">5</li>
+            <li className="s-block">
+              <p>37</p>
+              <p className="element">Rb</p>
+              <p className="weight">22.990</p>
+            </li>
+            <li className="s-block">
+              <p>38</p>
+              <p className="element">Sr</p>
+              <p className="weight">24</p>
+            </li>
+            <li className="d-block space">
+              <p>39</p>
+              <p className="element">Y</p>
+              <p className="weight">44.956</p>
+            </li>
+            <li className="d-block">
+              <p>40</p>
+              <p className="element">Zr</p>
+              <p className="weight">47.867</p>
+            </li>
+            <li className="d-block">
+              <p>41</p>
+              <p className="element">Nb</p>
+              <p className="weight">50.942</p>
+            </li>
+            <li className="d-block">
+              <p>42</p>
+              <p className="element">Mo</p>
+              <p className="weight">51.996</p>
+            </li>
+            <li className="d-block">
+              <p>43</p>
+              <p className="element">Tc</p>
+              <p className="weight">54.938</p>
+            </li>
+            <li className="d-block">
+              <p>44</p>
+              <p className="element">Ru</p>
+              <p className="weight">55.845</p>
+            </li>
+            <li className="d-block">
+              <p>45</p>
+              <p className="element">Rh</p>
+              <p className="weight">58.933</p>
+            </li>
+            <li className="d-block">
+              <p>46</p>
+              <p className="element">Pd</p>
+              <p className="weight">58.693</p>
+            </li>
+            <li className="d-block">
+              <p>47</p>
+              <p className="element">Ag</p>
+              <p className="weight">63.38</p>
+            </li>
+            <li className="d-block">
+              <p>48</p>
+              <p className="element">Cd</p>
+              <p className="weight">65.38</p>
+            </li>
+            <li className="p-block">
+              <p>49</p>
+              <p className="element">In</p>
+              <p className="weight">69.723</p>
+            </li>
+            <li className="p-block">
+              <p>50</p>
+              <p className="element">Sn</p>
+              <p className="weight">72.63</p>
+            </li>
+            <li className="p-block">
+              <p>51</p>
+              <p className="element">Sb</p>
+              <p className="weight">74.922</p>
+            </li>
+            <li className="p-block">
+              <p>52</p>
+              <p className="element">Te</p>
+              <p className="weight">78.96</p>
+            </li>
+            <li className="p-block">
+              <p>53</p>
+              <p className="element">I</p>
+              <p className="weight">79.904</p>
+            </li>
+            <li className="p-block">
+              <p>54</p>
+              <p className="element">Xe</p>
+              <p className="weight">83.798</p>
+            </li>
+          </ul>{/*Close Sixth row*/}
+          <ul>{/*Seventh Row*/}
+            <li className="red">6</li>
+            <li className="s-block">
+              <p>55</p>
+              <p className="element">Cs</p>
+              <p className="weight">22.990</p>
+            </li>
+            <li className="s-block">
+              <p>56</p>
+              <p className="element">Ba</p>
+              <p className="weight">24</p>
+            </li>
+            <li className="Lu red">*</li>
+            <li className="d-block">
+              <p>71</p>
+              <p className="element">Lu</p>
+              <p className="weight">44.956</p>
+            </li>
+            <li className="d-block">
+              <p>72</p>
+              <p className="element">Hf</p>
+              <p className="weight">47.867</p>
+            </li>
+            <li className="d-block">
+              <p>73</p>
+              <p className="element">Ta</p>
+              <p className="weight">50.942</p>
+            </li>
+            <li className="d-block">
+              <p>74</p>
+              <p className="element">W</p>
+              <p className="weight">51.996</p>
+            </li>
+            <li className="d-block">
+              <p>75</p>
+              <p className="element">Re</p>
+              <p className="weight">54.938</p>
+            </li>
+            <li className="d-block">
+              <p>76</p>
+              <p className="element">Os</p>
+              <p className="weight">55.845</p>
+            </li>
+            <li className="d-block">
+              <p>77</p>
+              <p className="element">Ir</p>
+              <p className="weight">58.933</p>
+            </li>
+            <li className="d-block">
+              <p>78</p>
+              <p className="element">Pt</p>
+              <p className="weight">58.693</p>
+            </li>
+            <li className="d-block">
+              <p>79</p>
+              <p className="element">Au</p>
+              <p className="weight">63.38</p>
+            </li>
+            <li className="d-block">
+              <p>80</p>
+              <p className="element">Hg</p>
+              <p className="weight">65.38</p>
+            </li>
+            <li className="p-block">
+              <p>81</p>
+              <p className="element">Tl</p>
+              <p className="weight">69.723</p>
+            </li>
+            <li className="p-block">
+              <p>82</p>
+              <p className="element">Pb</p>
+              <p className="weight">72.63</p>
+            </li>
+            <li className="p-block">
+              <p>83</p>
+              <p className="element">Bi</p>
+              <p className="weight">74.922</p>
+            </li>
+            <li className="p-block">
+              <p>84</p>
+              <p className="element">Po</p>
+              <p className="weight">78.96</p>
+            </li>
+            <li className="p-block">
+              <p>85</p>
+              <p className="element">At</p>
+              <p className="weight">79.904</p>
+            </li>
+            <li className="p-block">
+              <p>86</p>
+              <p className="element">Rn</p>
+              <p className="weight">83.798</p>
+            </li>
+          </ul>{/*Close Seventh row*/}
+          <ul>{/*Eigth Row*/}
+            <li className="red">7</li>
+            <li className="s-block">
+              <p>87</p>
+              <p className="element">Fr</p>
+              <p className="weight">22.990</p>
+            </li>
+            <li className="s-block">
+              <p>88</p>
+              <p className="element">Ra</p>
+              <p className="weight">24</p>
+            </li>
+            <li className="Lr red">**</li>
+            <li className="d-block">
+              <p>103</p>
+              <p className="element">Lr</p>
+              <p className="weight">44.956</p>
+            </li>
+            <li className="d-block">
+              <p>104</p>
+              <p className="element">Rf</p>
+              <p className="weight">47.867</p>
+            </li>
+            <li className="d-block">
+              <p>105</p>
+              <p className="element">Db</p>
+              <p className="weight">50.942</p>
+            </li>
+            <li className="d-block">
+              <p>106</p>
+              <p className="element">Sg</p>
+              <p className="weight">51.996</p>
+            </li>
+            <li className="d-block">
+              <p>107</p>
+              <p className="element">Bh</p>
+              <p className="weight">54.938</p>
+            </li>
+            <li className="d-block">
+              <p>108</p>
+              <p className="element">Hs</p>
+              <p className="weight">55.845</p>
+            </li>
+            <li className="d-block">
+              <p>109</p>
+              <p className="element">Mt</p>
+              <p className="weight">58.933</p>
+            </li>
+            <li className="d-block">
+              <p>110</p>
+              <p className="element">Ds</p>
+              <p className="weight">58.693</p>
+            </li>
+            <li className="d-block">
+              <p>111</p>
+              <p className="element">Rg</p>
+              <p className="weight">63.38</p>
+            </li>
+            <li className="d-block">
+              <p>112</p>
+              <p className="element">Cn</p>
+              <p className="weight">65.38</p>
+            </li>
+            <li className="p-block">
+              <p>113</p>
+              <p className="element">Uut</p>
+              <p className="weight">69.723</p>
+            </li>
+            <li className="p-block">
+              <p>114</p>
+              <p className="element">Fl</p>
+              <p className="weight">72.63</p>
+            </li>
+            <li className="p-block">
+              <p>115</p>
+              <p className="element">Uup</p>
+              <p className="weight">74.922</p>
+            </li>
+            <li className="p-block">
+              <p>116</p>
+              <p className="element">Lv</p>
+              <p className="weight">78.96</p>
+            </li>
+            <li className="p-block">
+              <p>117</p>
+              <p className="element">Uus</p>
+              <p className="weight">79.904</p>
+            </li>
+            <li className="p-block">
+              <p>118</p>
+              <p className="element">Uuo</p>
+              <p className="weight">83.798</p>
+            </li>
+          </ul>
+          {/*Close Eight row*/}
+        </div>{/*Closes Top Section of Periodic Table Lanthanoids and Actinoids are below*/}
+        <div className="clear">
         </div>
-        <div className="header_text">
-          <p className="number_text">1<span className="hidden">_______</span> 2<span className="hidden">________</span> 3<span className="hidden">______</span> 4<span className="hidden">_______</span> 5<span className="hidden">_______</span> 6<span className="hidden">______</span> 7<span className="hidden">______</span> 8<span className="hidden">______</span> 9<span className="hidden">______</span> 10<span className="hidden">______</span> 11<span className="hidden">______</span> 12<span className="hidden">______</span> 13<span className="hidden">______</span> 14<span className="hidden">______</span> 15<span className="hidden">______</span> 16<span className="hidden">______</span> 17<span className="hidden">______</span> 18</p>
-        </div>
-        <div className="blue_column1">
-          <p className="blue">1<br /><span>H</span><br />1.008<br /></p>
-          <p className="blue">3<br /><span>Li</span><br />6.94<br /></p>
-          <p className="blue">11<br /><span>Na</span><br />22.990<br /></p>
-          <p className="blue">19<br /><span>K</span><br />39.098<br /></p>
-          <p className="blue">37<br /><span>Rb</span><br />85.468<br /></p>
-          <p className="blue">55<br /><span>Cs</span><br />132.91<br /></p>
-          <p className="blue">87<br /><span>Fr</span><br />[223.02]<br /></p>
-          <p className="text">*Lanthanoids<span className="hidden">____</span>*<br /><br /><br /><br />**Actinoids<span className="hidden">____</span>**</p>
-        </div>
-        <div className="blue_column2">
-          <p className="white">4<br /><span>rr</span><br />9.02334<br /><br /></p>
-          <p className="blue">4<br /><span>Be</span><br />9.0122<br /></p>
-          <p className="blue">12<br /><span>Mg</span><br />24.305<br /></p>
-          <p className="blue">20<br /><span>Ca</span><br />40.078<br /></p>
-          <p className="blue">38<br /><span>Sr</span><br />87.62<br /></p>
-          <p className="blue">56<br /><span>Ba</span><br />137.33<br /></p>
-          <p className="blue">88<br /><span>Ra</span><br />[226.03]<br /></p>
-        </div>
-        <div className="pink_column1">
-          <p className="pink">21<br /><span>Sc</span><br />44.956<br /></p>
-          <p className="pink">39<br /><span>Y</span><br />88.906<br /></p>
-          <p className="pink">71<br /><span>Lu</span><br />174.97<br /></p>
-          <p className="pink">103<br /><span>Lr</span><br />[262.11]<br /></p>
-          <p className="green">57<br /><span>La</span><br />138.91<br /></p>
-          <p className="green">89<br /><span>Ac</span><br />[227.03]<br /></p>
-        </div>
-        <div className="pink_column2">
-          <p className="pink">22<br /><span>Ti</span><br />47.867<br /></p>
-          <p className="pink">40<br /><span>Zr</span><br />91.224<br /></p>
-          <p className="pink">72<br /><span>Hf</span><br />178.49<br /></p>
-          <p className="pink">104<br /><span>Rf</span><br />[265.12]<br /></p>
-          <p className="green">58<br /><span>Ce</span><br />140.12<br /></p>
-          <p className="green">90<br /><span>Th</span><br />232.04<br /></p>
-        </div>
-        <div className="pink_column3">
-          <p className="pink">23<br /><span>V</span><br />50.942<br /></p>
-          <p className="pink">41<br /><span>Nb</span><br />92.906<br /></p>
-          <p className="pink">73<br /><span>Ta</span><br />180.95<br /></p>
-          <p className="pink">105<br /><span>Db</span><br />[268.13]<br /></p>
-          <p className="green">59<br /><span>Pr</span><br />140.91<br /></p>
-          <p className="green">91<br /><span>Pa</span><br />231.04<br /></p>
-        </div>
-        <div className="pink_column4">
-          <p className="pink">24<br /><span>Cr</span><br />51.996<br /></p>
-          <p className="pink">42<br /><span>Mo</span><br />95.96<br /></p>
-          <p className="pink">74<br /><span>W</span><br />183.84<br /></p>
-          <p className="pink">106<br /><span>Sg</span><br />[271.13]<br /></p>
-          <p className="green">60<br /><span>Nd</span><br />144.24<br /></p>
-          <p className="green">92<br /><span>U</span><br />238.03<br /></p>
-        </div>
-        <div className="pink_column5">
-          <p className="pink">25<br /><span>Mn</span><br />54.938<br /></p>
-          <p className="pink">43<br /><span>Tc</span><br />[97.91]<br /></p>
-          <p className="pink">75<br /><span>Re</span><br />186.21<br /></p>
-          <p className="pink">107<br /><span>Bh</span><br />[270]<br /></p>
-          <p className="green">61<br /><span>Pm</span><br />[144.91]<br /></p>
-          <p className="green">93<br /><span>Np</span><br />[237.05]<br /></p>
-        </div>
-        <div className="pink_column6">
-          <p className="pink">26<br /><span>Fe</span><br />55.845<br /></p>
-          <p className="pink">44<br /><span>Ru</span><br />101.07<br /></p>
-          <p className="pink">76<br /><span>Os</span><br />190.23<br /></p>
-          <p className="pink">108<br /><span>Hs</span><br />[277.15]<br /></p>
-          <p className="green">62<br /><span>Sm</span><br />150.36<br /></p>
-          <p className="green">94<br /><span>Pu</span><br />[244.06]<br /></p>
-        </div>
-        <div className="pink_column7">
-          <p className="pink">27<br /><span>Co</span><br />58.933<br /></p>
-          <p className="pink">45<br /><span>Rh</span><br />102.91<br /></p>
-          <p className="pink">77<br /><span>Ir</span><br />192.22<br /></p>
-          <p className="pink">109<br /><span>Mt</span><br />[276.15]<br /></p>
-          <p className="green">63<br /><span>Eu</span><br />151.96<br /></p>
-          <p className="green">95<br /><span>Am</span><br />[243.06]<br /></p>
-        </div>
-        <div className="pink_column8">
-          <p className="pink">28<br /><span>Ni</span><br />58.693<br /></p>
-          <p className="pink">46<br /><span>Pd</span><br />106.42<br /></p>
-          <p className="pink">78<br /><span>Pt</span><br />195.08<br /></p>
-          <p className="pink">110<br /><span>Ds</span><br />[281.16]<br /></p>
-          <p className="green">64<br /><span>Gd</span><br />157.25<br /></p>
-          <p className="green">96<br /><span>Cm</span><br />[247.07]<br /></p>
-        </div>
-        <div className="pink_column9">
-          <p className="pink">29<br /><span>Cu</span><br />63.546<br /></p>
-          <p className="pink">47<br /><span>Ag</span><br />107.87<br /></p>
-          <p className="pink">79<br /><span>Au</span><br />196.97<br /></p>
-          <p className="pink">111<br /><span>Rg</span><br />[280.16]<br /></p>
-          <p className="green">65<br /><span>Tb</span><br />158.93<br /></p>
-          <p className="green">97<br /><span>Bk</span><br />[247.07]<br /></p>
-        </div>
-        <div className="pink_column10">
-          <p className="pink">30<br /><span>Zn</span><br />65.38<br /></p>
-          <p className="pink">48<br /><span>Cd</span><br />112.41<br /></p>
-          <p className="pink">80<br /><span>Hg</span><br />22.59<br /></p>
-          <p className="pink">112<br /><span>Cn</span><br />[285.17]<br /></p>
-          <p className="green">66<br /><span>Dy</span><br />162.50<br /></p>
-          <p className="green">98<br /><span>Cf</span><br />[251.08]<br /></p>
-        </div>
-        <div className="yellow_column1" style={{paddingLeft: 0}}>
-          <p className="yellow">5<br /><span>B</span><br />10.81<br /></p>
-          <p className="yellow">13<br /><span>Al</span><br />26.982<br /></p>
-          <p className="yellow">31<br /><span>Ga</span><br />69.723<br /></p>
-          <p className="yellow">49<br /><span>In</span><br />114.82<br /></p>
-          <p className="yellow">81<br /><span>Ti</span><br />204.38<br /></p>
-          <p className="yellow">113<br /><span>Uut</span><br />[284.181]<br /></p>
-          <p className="green">67<br /><span>Ho</span><br />164.93<br /></p>
-          <p className="green">99<br /><span>Es</span><br />[252.08]<br /></p>
-        </div>
-        <div className="yellow_column2" style={{paddingLeft: 0}}>
-          <p className="yellow">6<br /><span>C</span><br />12.011<br /></p>
-          <p className="yellow">14<br /><span>Si</span><br />28.085<br /></p>
-          <p className="yellow">32<br /><span>Ge</span><br />72.63<br /></p>
-          <p className="yellow">50<br /><span>Sn</span><br />118.71<br /></p>
-          <p className="yellow">82<br /><span>Pb</span><br />207.2<br /></p>
-          <p className="yellow">114<br /><span>Fi</span><br />[289.19]<br /></p>
-          <p className="green">68<br /><span>Er</span><br />167.26<br /></p>
-          <p className="green">100<br /><span>Fm</span><br />[257.10]<br /></p>
-        </div>
-        <div className="yellow_column3" style={{paddingLeft: 0}}>
-          <p className="yellow">7<br /><span>N</span><br />14.007<br /></p>
-          <p className="yellow">15<br /><span>P</span><br />30.974<br /></p>
-          <p className="yellow">33<br /><span>As</span><br />74.922<br /></p>
-          <p className="yellow">51<br /><span>Sb</span><br />121.76<br /></p>
-          <p className="yellow">83<br /><span>Bi</span><br />208.98<br /></p>
-          <p className="yellow">115<br /><span>Uup</span><br />[288.19]<br /></p>
-          <p className="green">69<br /><span>Tm</span><br />168.93<br /></p>
-          <p className="green">101<br /><span>Md</span><br />[258.10]<br /></p>
-        </div>
-        <div className="yellow_column4" style={{paddingLeft: 0}}>
-          <p className="yellow">8<br /><span>O</span><br />15.999<br /></p>
-          <p className="yellow">16<br /><span>S</span><br />32.06<br /></p>
-          <p className="yellow">34<br /><span>Se</span><br />78.96<br /></p>
-          <p className="yellow">52<br /><span>Te</span><br />127.60<br /></p>
-          <p className="yellow">84<br /><span>Po</span><br />[208.98]<br /></p>
-          <p className="yellow">116<br /><span>Lv</span><br />[293]<br /></p>
-          <p className="green">70<br /><span>Yb</span><br />173.05<br /></p>
-          <p className="green">102<br /><span>No</span><br />[259.10]<br /></p>
-        </div>
-        <div className="yellow_column5" style={{paddingLeft: 0}}>
-          <p className="yellow">9<br /><span>F</span><br />10.81<br /></p>
-          <p className="yellow">17<br /><span>Ci</span><br />26.982<br /></p>
-          <p className="yellow">35<br /><span>Br</span><br />69.723<br /></p>
-          <p className="yellow">53<br /><span>I</span><br />114.82<br /></p>
-          <p className="yellow">85<br /><span>At</span><br />204.38<br /></p>
-          <p className="yellow">117<br /><span>Uus</span><br />[284.181]<br /></p>
-        </div>
-        <div className="yellow_column6" style={{paddingLeft: 0}}>
-          <p className="yellow" style={{marginTop: 0}}>2<br /><span>He</span><br />4.0026<br /></p>
-          <p className="yellow">10<br /><span>Ne</span><br />20.180<br /></p>
-          <p className="yellow">18<br /><span>Ar</span><br />39.948<br /></p>
-          <p className="yellow">36<br /><span>Kr</span><br />83.798<br /></p>
-          <p className="yellow">54<br /><span>Xe</span><br />131.29<br /></p>
-          <p className="yellow">86<br /><span>Rn</span><br />[222.02]<br /></p>
-          <p className="yellow">118<br /><span>Uuo</span><br />[294]<br /></p>
-        </div>
-      </div>
+        <div id="bottom-rows">
+          <p className="left red">*Lanthanoids</p>
+          <ul>
+            <li className="f-block">
+              <p>57</p>
+              <p className="element">La</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>58</p>
+              <p className="element">Ce</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>59</p>
+              <p className="element">Pr</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>60</p>
+              <p className="element">Nd</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>61</p>
+              <p className="element">Pm</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>62</p>
+              <p className="element">Sm</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>63</p>
+              <p className="element">Eu</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>64</p>
+              <p className="element">Gd</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>65</p>
+              <p className="element">Tb</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>66</p>
+              <p className="element">Dy</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>67</p>
+              <p className="element">Ho</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>68</p>
+              <p className="element">Er</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>69</p>
+              <p className="element">Tm</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>70</p>
+              <p className="element">Yb</p>
+              <p className="weight">138.91</p>
+            </li>
+          </ul>
+          <div className="clear">
+          </div>
+          <p className="left red">**Actinoids</p>
+          <ul>
+            <li className="f-block">
+              <p>89</p>
+              <p className="element">Ac</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>90</p>
+              <p className="element">Th</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>91</p>
+              <p className="element">Pa</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>92</p>
+              <p className="element">U</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>93</p>
+              <p className="element">Np</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>94</p>
+              <p className="element">Pu</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>95</p>
+              <p className="element">Am</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>96</p>
+              <p className="element">Cm</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>97</p>
+              <p className="element">Bk</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>98</p>
+              <p className="element">Cf</p>
+              <p className="weight">138.91</p>
+            </li>
+            <p>99</p>
+            <li className="f-block">
+              <p className="element">Es</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>100</p>
+              <p className="element">Fm</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>101</p>
+              <p className="element">Md</p>
+              <p className="weight">138.91</p>
+            </li>
+            <li className="f-block">
+              <p>102</p>
+              <p className="element">No</p>
+              <p className="weight">138.91</p>
+            </li>
+          </ul>
+        </div>{/*Close Lanthanoids and Actinoids div*/}
+      </div>{/*Close Wrapper*/}
 
       </div>
     );
