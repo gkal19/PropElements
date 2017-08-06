@@ -7,7 +7,7 @@ module.exports = {
   context: path.join(__dirname, "src"),
   devtool: debug ? "inline-sourcemap" : null,
   entry: "./app.js",
-  
+
   module: {
     loaders: [
       {
@@ -24,13 +24,13 @@ module.exports = {
   }
     ]
   },
-  
+
   output: {
     path: __dirname + "/public/js/",
     publicPath: "/js/",
     filename: "app.min.js"
   },
-  
+
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
